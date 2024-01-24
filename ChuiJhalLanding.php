@@ -22,3 +22,30 @@ function chuijhal_enqueue(){
     wp_enqueue_script( 'chuijhal_js', plugins_url( 'src/script.js', __FILE__ ) );
 }
 add_action( 'wp_enqueue_scripts', 'chuijhal_enqueue' );
+
+
+
+function chuijhal_elementor_missing() {
+    // Check if Elementor is active
+    if ( ! is_plugin_active( 'elementor/elementor.php' ) ) {
+        // Elementor is not active, show a notice
+        add_action( 'admin_notices', 'chuijhal_elementor_not_activated_notice' );
+    }
+}
+
+function chuijhal_elementor_not_activated_notice() {
+    ?>
+    <div class="notice notice-error">
+        <p><?php _e( 'Elementor is not activated. Please activate Elementor to use Chuijhal Plugin.', 'chuijhal' ); ?></p>
+    </div>
+    <?php
+}
+
+// Hook the check_elementor_activation function to the admin_init action
+add_action( 'admin_init', 'chuijhal_elementor_missing' );
+
+
+
+
+require_once 'ChuijhalElementorWidget.php';
+new ChuijhalElementorWidget();
