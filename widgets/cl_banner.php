@@ -64,7 +64,7 @@ class Cl_banner extends Elementor\Widget_Base{
                 'description',
                 [
                     'label'     => 'Description',
-                    'type'      => \Elementor\Controls_Manager::TEXT,
+                    'type'      => \Elementor\Controls_Manager::TEXTAREA,
                     'default'   => 'Your Description',
                 ]
             );

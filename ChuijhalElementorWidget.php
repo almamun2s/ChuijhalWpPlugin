@@ -23,12 +23,14 @@ class ChuijhalElementorWidget{
      */
     public function register_widgets(){
         // Include Widger files
-        require_once("widgets/cl_banner.php");
+        include_once("widgets/cl_banner.php");
+        include_once("widgets/cl_uses.php");
 
 
 
         // Register Widgets
         \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Cl_banner());
+        \Elementor\Plugin::instance()->widgets_manager->register_widget_type(new Cl_uses());
     }
 }
 
