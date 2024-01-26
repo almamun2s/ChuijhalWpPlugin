@@ -41,37 +41,37 @@ class Cl_price extends Elementor\Widget_Base{
                 'label'     => 'Top Banner',
             ]
         );
-        // ============= Inseting Controlls ============
-        $this -> add_control(
-            'description',
-            [
-                'label'     => 'Description',
-                'type'      => \Elementor\Controls_Manager::TEXTAREA,
-                'default'   => 'Description',
-            ]
-        );
-        $this->add_control(
-            'price_list',
-            [
-                'label' => 'Price List',
-                'type' => \Elementor\Controls_Manager::REPEATER,
-                'fields' => [
-                    [
-                        'name' => 'list_description',
-                        'label' => 'Price list',
-                        'type' => \Elementor\Controls_Manager::TEXTAREA,
-                        'default' => 'Description',
-                        'label_block' => true,
+            // ============= Inseting Controlls ============
+            $this -> add_control(
+                'description',
+                [
+                    'label'     => 'Description',
+                    'type'      => \Elementor\Controls_Manager::TEXTAREA,
+                    'default'   => 'Description',
+                ]
+            );
+            $this->add_control(
+                'price_list',
+                [
+                    'label' => 'Price List',
+                    'type' => \Elementor\Controls_Manager::REPEATER,
+                    'fields' => [
+                        [
+                            'name' => 'list_description',
+                            'label' => 'Price list',
+                            'type' => \Elementor\Controls_Manager::TEXTAREA,
+                            'default' => 'Description',
+                            'label_block' => true,
+                        ],
                     ],
-                ],
-                'default' => [
-                    [
-                        'list_description' => 'Description',
+                    'default' => [
+                        [
+                            'list_description' => 'Description',
+                        ],
                     ],
-                ],
-                'title_field' => '{{{ list_description }}}',
-            ]
-        );
+                    'title_field' => '{{{ list_description }}}',
+                ]
+            );
 
 
 
