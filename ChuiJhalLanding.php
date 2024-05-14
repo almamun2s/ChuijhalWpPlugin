@@ -4,7 +4,7 @@
     Plugin Name: ChuiJhal Landing
     Plugin URI: https://github.com/almamun2s/ChuijhalWpPlugin
     Description: This plugin is made for GroceryBazar. You can make an awesome page using this plugin. 
-    Version: 1.1
+    Version: 1.2
     Requires at least: 5.8
     Requires PHP: 5.6.20
     Author: Abdullah Almamun

@@ -43,16 +43,6 @@ class Cl_banner extends Elementor\Widget_Base{
         );
         // ============= Inseting Controlls ============
             $this -> add_control(
-                'logo',
-                [
-                    'label'     => 'Logo',
-                    'type'      => \Elementor\Controls_Manager::MEDIA,
-                    'default'   => [
-                                    'url' => plugins_url( '../img/logo.png', __FILE__ )
-                                ],
-                ]
-            );
-            $this -> add_control(
                 'title',
                 [
                     'label'     => 'Title',
@@ -125,11 +115,6 @@ class Cl_banner extends Elementor\Widget_Base{
                 </svg>
         </div>
         <div class="cl-container">
-            <div class="cl-logo">
-                <a href="#">
-                    <img src="<?= $settings['logo']['url'] ?>" alt="logo">
-                </a>
-            </div>
             <h1><?= $settings['title'] ?></h1>
             <h3><?= $settings['description'] ?></h3>
             <div class="cl-slider">
